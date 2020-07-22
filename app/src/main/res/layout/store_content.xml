@@ -1,0 +1,413 @@
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_flip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#10000000"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/store_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/store_progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="-7dp"
+                android:indeterminate="true"
+                android:max="100"
+                android:theme="@style/SearchLinearProgress" />
+
+            <com.kopykitab.ereader.components.AutoScrollViewPager
+                android:id="@+id/banner_scroll_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/store_banner_height"
+                android:layout_marginTop="@dimen/store_item_margin">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/banner_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:overScrollMode="never" />
+
+            </com.kopykitab.ereader.components.AutoScrollViewPager>
+
+            <LinearLayout
+                android:id="@+id/recommendation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/store_item_margin"
+                android:layout_weight="100"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/store_recommendation_header_padding"
+                android:paddingTop="@dimen/store_recommendation_header_padding">
+
+                <com.kopykitab.ereader.components.TextView
+                    android:id="@+id/recommendation_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:text="Recommended for you"
+                    android:textColor="#787878"
+                    android:textSize="@dimen/store_header_text_size"
+                    custom:font_name="Roboto-Medium" />
+
+                <com.kopykitab.ereader.components.Button
+                    android:id="@+id/recommendation_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="25"
+                    android:background="@drawable/store_rounded_button"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="View All"
+                    android:textAllCaps="false"
+                    android:textColor="#383838"
+                    android:textSize="@dimen/store_right_header_text_size" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommendation_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdgeLength="0dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:fadingEdgeLength="0dp"
+                android:overScrollMode="never"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:id="@+id/publisher_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/store_item_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/store_recommendation_header_padding"
+                android:paddingTop="@dimen/store_recommendation_header_padding"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="75"
+                        android:orientation="vertical">
+
+                        <com.kopykitab.ereader.components.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dp"
+                            android:text="Top Publishers"
+                            android:textColor="#383838"
+                            android:textSize="@dimen/store_header_text_size" />
+
+                        <com.kopykitab.ereader.components.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="17dp"
+                            android:text="Best Offer Upto 75% Off"
+                            android:textSize="@dimen/store_category_sub_header_text_size" />
+                    </LinearLayout>
+
+                    <com.kopykitab.ereader.components.Button
+                        android:id="@+id/publisher_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/store_rounded_button"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="View All"
+                        android:textAllCaps="false"
+                        android:textColor="#383838"
+                        android:textSize="@dimen/store_right_header_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/store_item_margin"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/disha_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/disha" />
+
+                        <ImageView
+                            android:id="@+id/oswaal_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/osw" />
+
+                        <ImageView
+                            android:id="@+id/laxmi_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:layout_marginRight="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/lp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/store_publisher_logo_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/schand_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:src="@drawable/schand" />
+
+                        <ImageView
+                            android:id="@+id/phi_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:src="@drawable/phi" />
+
+                        <ImageView
+                            android:id="@+id/shuchita_publisher"
+                            android:layout_width="@dimen/store_publisher_logo_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/store_publisher_logo_margin"
+                            android:layout_marginRight="@dimen/store_publisher_logo_margin"
+                            android:background="@drawable/background_publisher_logo"
+                            android:padding="@dimen/store_publisher_logo_padding"
+                            android:src="@drawable/shuchita" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="@dimen/store_item_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/store_cart_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="@dimen/store_cart_history_view_width"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/store_cart_view_background" />
+
+                    <com.kopykitab.ereader.components.TextView
+                        android:id="@+id/cart_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/store_item_margin"
+                        android:gravity="center"
+                        android:text="Cart\nHistory"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/store_cart_text_size"
+                        custom:font_name="Roboto-Bold" />
+
+                    <com.kopykitab.ereader.components.TextView
+                        android:id="@+id/cart_total_products"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Total Produts"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/store_header_text_size"
+                        custom:font_name="Roboto-Medium" />
+
+                    <com.kopykitab.ereader.components.Button
+                        android:id="@+id/cart_checkout_button"
+                        android:layout_width="@dimen/store_cart_button_width"
+                        android:layout_height="@dimen/store_cart_button_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/store_cart_rounded_button"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="View Cart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/action_bar_background"
+                        android:textSize="@dimen/store_cart_button_text"
+                        custom:font_name="Roboto-Bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cart_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fadingEdgeLength="0dp"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:paddingRight="8dp"
+                        android:scrollbars="horizontal" />
+
+                    <ImageButton
+                        android:id="@+id/store_cart_scroll_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/store_cart_slider_background"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_forward"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category_view_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:fadingEdgeLength="0dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/bottom_navigation_widget_height">
+
+        <ImageView
+            android:layout_width="@dimen/library_ebook_not_found_icon_size"
+            android:layout_height="@dimen/library_ebook_not_found_icon_size"
+            android:src="@drawable/no_internet" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="You are not connected to the internet"
+            android:textColor="@color/action_bar_background"
+            android:textSize="@dimen/library_button_text_size"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Please check your Wi-Fi or mobile network connection and try again"
+            android:textColor="#50000000"
+            android:textSize="14sp"
+            custom:font_name="Roboto-Light" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="@dimen/store_button_width"
+                android:layout_height="@dimen/library_button_height"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button_state"
+                android:onClick="OnSettingsButtonClick"
+                android:text="Settings"
+                android:textAllCaps="false"
+                android:textColor="@drawable/library_button_text_selector"
+                android:textSize="@dimen/library_button_text_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="@dimen/store_button_width"
+                android:layout_height="@dimen/library_button_height"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button_state"
+                android:onClick="OnRefreshButtonClick"
+                android:text="Refresh"
+                android:textAllCaps="false"
+                android:textColor="@drawable/library_button_text_selector"
+                android:textSize="@dimen/library_button_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</ViewFlipper>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:paddingBottom="@dimen/bottom_navigation_widget_height"
+            android:paddingTop="@dimen/bottom_navigation_widget_height">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/library_store_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/library_store" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Explore our vast collection of eBooks\nGrab it at"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/library_store_text"
+                    custom:font_name="Roboto-Regular" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Amazing Deals"
+                    android:textColor="@color/action_bar_background"
+                    android:textSize="@dimen/library_store_sub_text"
+                    custom:font_name="Roboto-Bold" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:id="@+id/library_store_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/library_ebook_not_found_padding"
+                    android:layout_marginRight="@dimen/library_ebook_not_found_padding"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/library_store_dotted_border"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="#E68102"
+                    android:visibility="gone" />
+
+                <com.kopykitab.ereader.components.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/library_ebook_not_found_padding"
+                    android:background="@drawable/permission_rounded_button"
+                    android:onClick="OnExploreButtonClick"
+                    android:padding="8dp"
+                    android:text="Explore"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/library_button_text_size" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

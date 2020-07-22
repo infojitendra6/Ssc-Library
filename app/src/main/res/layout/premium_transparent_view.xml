@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/premium_transparent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <ImageButton
+        android:id="@+id/premium_view_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:foregroundGravity="center_vertical"
+        android:src="@drawable/close_icon" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/premium_view_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="25sp"
+        android:text="You've hit your 10 free page print limit. Go unlimited with a premium subscritpion"
+        android:textColor="#FF8F00"
+        android:textSize="@dimen/add_print_text" />
+
+    <com.kopykitab.ereader.components.Button
+        android:id="@+id/premium_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/premium_view_text"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="#FF8F00"
+        android:text="gopremium"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+</RelativeLayout>

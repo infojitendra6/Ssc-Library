@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_list_item_state"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/notification_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification Title"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        custom:font_name="Roboto-Medium" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/notification_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification Date"
+        android:textColor="#B6B6B6"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/notification_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/notification_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Notification Description"
+            android:textColor="@android:color/black" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/notification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dashboard_element"
+            android:focusable="false"
+            android:minHeight="0dp"
+            android:padding="8dp"
+            android:text="Click Here"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            custom:font_name="Roboto-Medium" />
+    </LinearLayout>
+
+</LinearLayout>

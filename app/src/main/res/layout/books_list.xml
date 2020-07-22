@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_list_item_state"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp" >
+
+    <RelativeLayout
+        android:layout_width="82dp"
+        android:layout_height="125dp" >
+
+        <ImageView
+            android:id="@+id/book_list_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/book_list_depiction"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="4dp"
+            android:paddingRight="4dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:minHeight="125dp" >
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/book_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/book_list_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/book_list_name"
+            android:layout_marginTop="8dp"
+            android:text="Book Author"
+            android:textColor="@android:color/black"
+            custom:font_name="Roboto-Light" />
+
+        <RelativeLayout
+            android:id="@+id/book_price_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/book_list_author"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:visibility="gone" >
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/book_rental_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="8dp"
+                android:gravity="bottom"
+                android:text="Rental Period"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/book_price_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/book_price_2"
+                android:gravity="right|bottom"
+                android:text="Price 1"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:visibility="gone"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/book_price_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:gravity="right|bottom"
+                android:text="Price 2"
+                android:textColor="@color/action_bar_background"
+                android:textSize="13sp"
+                custom:font_name="Roboto-Medium" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/dialog_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EAEAEB"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Title"
+        android:textColor="#787878"
+        android:textSize="@dimen/library_dialog_title_text_size"
+        custom:font_name="Roboto-Medium" />
+
+    <ListView
+        android:id="@+id/dialog_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.15"
+        android:background="#33000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="12dp">
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/dialog_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:paddingLeft="12dp"
+            android:text="Info Text"
+            android:textColor="#787878"
+            android:textSize="@dimen/library_dialog_info_text_size"
+            custom:font_name="Roboto-Light" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_bottom_button"
+            android:layout_width="@dimen/store_button_width"
+            android:layout_height="@dimen/library_button_height"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/rounded_button_state"
+            android:text="Button"
+            android:textAllCaps="false"
+            android:textColor="@drawable/library_button_text_selector"
+            android:textSize="@dimen/library_button_text_size" />
+    </LinearLayout>
+</LinearLayout>

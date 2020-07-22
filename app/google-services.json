@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1034096850870",
+    "project_id": "graceful-mile-861"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034096850870:android:d5987efb9f0bb87a",
+        "android_client_info": {
+          "package_name": "com.kopykitab.ereader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034096850870-o7bj1ga5kd04u406rno5l6hce1gnpsm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kopykitab.ereader",
+            "certificate_hash": "382fc24f019cef7e26c8c0e16c6ce6b2af487e55"
+          }
+        },
+        {
+          "client_id": "1034096850870-11b3ebbb69vs8p5avn49ec14f677thbq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1034096850870-604h29rpntk0ia4to1hf9qgdnvredf9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kopykitab.ereader",
+            "certificate_hash": "69c5da19e66260ec352b6b98292db6f6a17c9a9c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByrePdmK-JYbkIvJ0ldgNrABno5o0_V6w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

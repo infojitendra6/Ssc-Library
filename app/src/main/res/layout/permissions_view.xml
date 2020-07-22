@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="100"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/permission_view_padding">
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/permission_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Title"
+        android:textColor="@color/action_bar_background"
+        android:textSize="@dimen/permission_title_text"
+        custom:font_name="Roboto-Bold" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/permission_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/permission_title"
+        android:layout_marginTop="8dp"
+        android:text="Sub-Title"
+        android:textColor="#70000000"
+        android:textSize="@dimen/permission_title_sub_text"
+        custom:font_name="Roboto-Medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#20000000" />
+
+    <ListView
+        android:id="@+id/permission_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.15"
+        android:divider="@color/white" />
+
+    <com.kopykitab.ereader.components.Button
+        android:id="@+id/permission_setting_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/permission_button_top_margin"
+        android:background="@drawable/permission_rounded_button"
+        android:padding="8dp"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/library_button_text_size" />
+</LinearLayout>

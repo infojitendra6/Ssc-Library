@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="14.3dp"
+    android:background="@drawable/premium_book_item_background"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/premium_book_image"
+        android:layout_width="@dimen/premium_book_image_width"
+        android:layout_height="@dimen/premium_book_image_height"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/premium_price_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#373737"
+            android:textSize="@dimen/premium_price_text_size" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/premium_price_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#373737"
+            android:textSize="@dimen/premium_price_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+	<color name="page_indicator">#8F8F8F</color>
+	<color name="busy_indicator">#8F8F8F</color>
+	<color name="button_normal">#22000000</color>
+	<color name="button_pressed">#44000000</color>
+	<color name="text_normal">#FFFFFF</color>
+	<color name="text_pressed">#FFFFFF</color>
+	<color name="text_border_normal">#000000</color>
+	<color name="text_border_pressed">#2572AC</color>
+	<color name="text_border_focused">#000000</color>
+	<color name="background_tab_pressed">#6633B5E5</color>
+	<color name="cpv_default_color">#2196F3</color>
+	<color name="cpv_default_unfinished_color">#5E5E5E</color>
+	<color name="cpv_default_unfinished_color_2">#405E5E5E</color>
+	
+	<color name="action_bar_background">#FF8F00</color>
+	<color name="action_bar_background_dark">#E68102</color>
+	
+	<color name="day_mode_background_color">#ADADAD</color>
+	<color name="night_mode_background_color">#4E4E4E</color>
+
+	<color name="bottom_navigation_widget_button_enable_color">#FF8F00</color>
+	<color name="bottom_navigation_widget_button_disable_color">#787878</color>
+	<color name="notes_bookmark_color">#383838</color>
+
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/dialog_icon_title"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#FEA300"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp" >
+
+        <ImageView
+            android:id="@+id/dialog_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            custom:font_name="Roboto-Medium" />
+    </LinearLayout>
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_below="@+id/dialog_icon_title"
+        android:padding="12dp"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:textSize="@dimen/dialog_message_font_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/dialog_message"
+        android:background="#44000000" />
+
+    <LinearLayout
+        android:id="@+id/dialog_one_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/dialog_message"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_one_button_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 1"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_two_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/dialog_message"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="100" >
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_two_button_button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 1"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#44000000" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_two_button_button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 2"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_three_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/dialog_message"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="100" >
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_three_button_button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 1"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#44000000" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_three_button_button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="34"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 2"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#44000000" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/dialog_three_button_button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:background="@drawable/dialog_box_border"
+            android:text="Button 3"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_font_size" />
+    </LinearLayout>
+
+</RelativeLayout>

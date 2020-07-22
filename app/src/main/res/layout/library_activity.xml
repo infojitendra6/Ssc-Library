@@ -1,0 +1,123 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/library_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:id="@+id/activity_search_view_check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <include layout="@layout/library_toolbar" />
+
+                <include
+                    layout="@layout/library_search_toolbar"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.kopykitab.ereader.components.LibrarySlidingTabStrip
+                android:id="@+id/library_tab"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/action_bar_background"
+                android:visibility="gone"
+                custom:pstsShouldExpand="true" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/library_content" />
+
+        <com.kopykitab.ereader.components.CircularImageView
+            android:id="@+id/library_view_change"
+            android:layout_width="@dimen/list_grid_view_icon_size"
+            android:layout_height="@dimen/list_grid_view_icon_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/library_view_change_bottom_margin"
+            android:layout_marginRight="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/list_view_icon"
+            android:visibility="gone"
+            custom:border="true"
+            custom:border_color="@color/action_bar_background"
+            custom:border_width="2dp"
+            custom:shadow="true"
+            custom:shadow_color="#44000000"
+            custom:shadow_radius="8" />
+
+        <include layout="@layout/bottom_navigation_widget" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_menu_container"
+        android:layout_width="@dimen/left_menu_drawer_size"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/action_bar_background"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:src="@drawable/k_logo_small" />
+
+            <LinearLayout
+                android:id="@+id/menu_list_header_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/transparent_button_state"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/back_button" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/menu_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:fadingEdge="none"
+            android:fitsSystemWindows="true"
+            android:groupIndicator="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

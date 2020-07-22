@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_popupmenu"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_bookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/annotation_list_item_state"
+        android:clickable="true"
+        android:divider="@drawable/item_divider"
+        android:orientation="vertical"
+        android:showDividers="end">
+
+        <TextView
+            android:id="@+id/item_bookmarks_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/add_bookmark"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/popupmenu_item_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_notes_bookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/annotation_list_item_state"
+        android:clickable="true"
+        android:divider="@drawable/item_divider"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/list_notes_and_bookmarks"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/popupmenu_item_size" />
+    </LinearLayout>
+
+</LinearLayout>

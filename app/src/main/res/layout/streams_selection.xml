@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/streams_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/streams_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/streams_submit_button"
+                android:background="@android:color/white"
+                android:cacheColorHint="#00000000"
+                android:choiceMode="singleChoice"
+                android:divider="#B6B6B6"
+                android:dividerHeight="1dp"
+                android:fadingEdgeLength="0dp"
+                android:overScrollMode="never" />
+
+            <com.kopykitab.ereader.components.CircularProgressView
+                android:id="@+id/streams_progress"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                custom:cpv_animAutostart="true"
+                custom:cpv_color="@color/action_bar_background"
+                custom:cpv_indeterminate="true"
+                custom:cpv_thickness="4dp" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/streams_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/streams_submit_button_height"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:background="@drawable/dashboard_element"
+                android:onClick="OnStreamsSubmitClick"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                custom:font_name="Roboto-Medium" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="No Streams found"
+                android:textColor="@color/action_bar_background"
+                android:textSize="18sp"
+                custom:font_name="Roboto-Medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/notification_not_found_icon_size"
+                android:layout_height="@dimen/notification_not_found_icon_size"
+                android:src="@drawable/error_icon" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="No Internet Connection"
+                android:textSize="24sp"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Please check your Wi-Fi or mobile network connection and try again"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    
+    <dimen name="textbox_height">36dp</dimen>
+    <dimen name="textbox_padding">5dp</dimen>
+    <dimen name="edittext_font_size">14sp</dimen>
+    <dimen name="button_font_size">14sp</dimen>
+    <dimen name="textview_font_size">12sp</dimen>
+    <dimen name="dialog_message_font_size">13sp</dimen>
+    
+    <dimen name="cpv_default_thickness">4dp</dimen>
+
+    <dimen name="login_main_top_icon_height">60dp</dimen>
+    <dimen name="login_main_form_width">300dp</dimen>
+    <dimen name="login_main_form_button_margin">18dp</dimen>
+    <dimen name="login_main_item_height">58dp</dimen>
+    <dimen name="login_main_item_margin">20dp</dimen>
+    <dimen name="login_main_item_inner_margin">5dp</dimen>
+    <dimen name="login_main_item_font_size">16dp</dimen>
+    <dimen name="login_main_item_font_size_small">11sp</dimen>
+    <dimen name="login_button_height_small">28dp</dimen>
+    <dimen name="left_menu_drawer_size">280dp</dimen>
+    <dimen name="notification_not_found_icon_size">72dp</dimen>
+
+    <dimen name="list_grid_view_icon_size">64dp</dimen>
+    <dimen name="bottom_navigation_widget_button_font_size">8dp</dimen>
+    <dimen name="library_view_change_bottom_margin">56dp</dimen>
+    <dimen name="bottom_navigation_widget_height">52dp</dimen>
+    <dimen name="library_button_width">160dp</dimen>
+    <dimen name="library_button_height">48dp</dimen>
+    <dimen name="library_button_text_size">14sp</dimen>
+    <dimen name="library_button_text_size_small">12sp</dimen>
+    <dimen name="library_ebook_not_found_icon_size">75dp</dimen>
+    <dimen name="library_ebook_not_found_padding">20dp</dimen>
+    <dimen name="library_dialog_title_text_size">15sp</dimen>
+    <dimen name="library_dialog_info_text_size">10sp</dimen>
+    <dimen name="library_dialog_list_item_size">14sp</dimen>
+    <dimen name="library_store_text">14sp</dimen>
+    <dimen name="library_store_sub_text">18dp</dimen>
+    <dimen name="streams_submit_button_height">52dp</dimen>
+    <dimen name="library_find_more_book_top_margin">200dp</dimen>
+    <dimen name="library_find_more_books_padding">8dp</dimen>
+
+    <dimen name="margin_note_delete_button">0dp</dimen>
+    <dimen name="bookmark_icon_size">24dp</dimen>
+    <dimen name="popupmenu_bottom_margin">4dp</dimen>
+    <dimen name="popupmenu_item_size">12sp</dimen>
+    <dimen name="notes_bookmark_font_size">10sp</dimen>
+    <dimen name="notes_bookmark_small_font_size">10sp</dimen>
+    <dimen name="notes_bookmark_not_found_icon_size">75dp</dimen>
+    <dimen name="notes_bookmark_not_found_font_size">14sp</dimen>
+    <dimen name="notes_bookmark_not_found_font_size_small">12sp</dimen>
+    <dimen name="notes_icon_weight">9dp</dimen>
+    <dimen name="notes_icon_height">12dp</dimen>
+    <dimen name="add_print_text">14sp</dimen>
+
+    <dimen name="search_icon_padding">12dp</dimen>
+    <dimen name="store_search_back_button_padding">4dp</dimen>
+    <dimen name="store_search_layout_margin">12dp</dimen>
+    <dimen name="store_search_hint_text_padding">53dp</dimen>
+    <dimen name="store_toolbar_margin">12dp</dimen>
+    <dimen name="store_button_width">150dp</dimen>
+    <dimen name="store_item_margin">10dp</dimen>
+    <dimen name="store_banner_height">120dp</dimen>
+    <dimen name="store_banner_circular_radius">8dp</dimen>
+    <dimen name="store_header_text_size">14sp</dimen>
+    <dimen name="store_right_header_text_size">12sp</dimen>
+    <dimen name="store_recommendation_header_padding">12dp</dimen>
+    <dimen name="store_recommendation_width">122dp</dimen>
+    <dimen name="store_recommendation_image_height">120dp</dimen>
+    <dimen name="store_recommendation_item_padding">8dp</dimen>
+    <dimen name="store_recommendation_item_text_size">12sp</dimen>
+    <dimen name="store_recommendation_price_text_size">11sp</dimen>
+    <dimen name="store_category_sub_header_text_size">12sp</dimen>
+    <dimen name="store_category_list_text_size">14sp</dimen>
+    <dimen name="store_publisher_logo_width">98dp</dimen>
+    <dimen name="store_publisher_logo_margin">5dp</dimen>
+    <dimen name="store_publisher_logo_padding">3dp</dimen>
+    <dimen name="store_cart_history_view_width">95dp</dimen>
+    <dimen name="store_cart_text_size">22sp</dimen>
+    <dimen name="store_cart_button_width">75dp</dimen>
+    <dimen name="store_cart_button_height">35dp</dimen>
+    <dimen name="store_cart_button_text">12sp</dimen>
+
+    <dimen name="permission_view_padding">12dp</dimen>
+    <dimen name="permission_button_top_margin">20dp</dimen>
+    <dimen name="permission_icon_size">30dp</dimen>
+    <dimen name="permission_title_text">20sp</dimen>
+    <dimen name="permission_title_sub_text">18sp</dimen>
+    <dimen name="permission_list_text">14dp</dimen>
+
+    <dimen name="library_premium_bottom_padding">58dp</dimen>
+    <dimen name="premium_title_text_size">17sp</dimen>
+    <dimen name="premium_header_text">12sp</dimen>
+    <dimen name="premium_price_text_size">12sp</dimen>
+    <dimen name="premium_feature_text_size">15sp</dimen>
+    <dimen name="premium_book_image_width">125dp</dimen>
+    <dimen name="premium_book_image_height">173.7dp</dimen>
+    <dimen name="premium_feature_margin_left">16dp</dimen>
+    <dimen name="premium_item_padding">16dp</dimen>
+</resources>

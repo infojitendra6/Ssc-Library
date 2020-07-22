@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.kopykitab.ereader.components.ClearableEditText
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="5dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/search_popover_border"
+        android:hint="@string/search_keywords"
+        android:textColorHint="#C7C7C7"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <ViewFlipper
+        android:id="@+id/search_popover_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/search_results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:cacheColorHint="#00000000" />
+
+            <LinearLayout
+                android:id="@+id/search_progress_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.kopykitab.ereader.components.TextView
+                    android:id="@+id/search_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white"
+                    android:text="@string/searching_" />
+
+                <ProgressBar
+                    android:id="@+id/search_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_not_found"
+                custom:font_name="Roboto-Medium" />
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>

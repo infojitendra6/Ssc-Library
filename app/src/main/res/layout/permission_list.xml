@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:orientation="horizontal"
+    android:paddingTop="18dp">
+
+    <ImageView
+        android:id="@+id/permission_image"
+        android:layout_width="@dimen/permission_icon_size"
+        android:layout_height="@dimen/permission_icon_size"
+        android:layout_marginRight="20dp"
+        android:scaleType="centerInside" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/permission_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Permission Text"
+        android:textColor="#70000000"
+        android:textSize="@dimen/permission_list_text"
+        custom:font_name="Roboto-Regular" />
+</LinearLayout>

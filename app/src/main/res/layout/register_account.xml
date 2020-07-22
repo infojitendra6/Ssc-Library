@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_button_state"
+                android:onClick="OnBackButtonClick"
+                android:padding="10dp"
+                android:src="@drawable/back_button" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:clickable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/k_logo_small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kopykitab.ereader.components.EditText
+                    android:id="@+id/register_firstname"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/textbox_height"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border"
+                    android:hint="First Name"
+                    android:nextFocusDown="@+id/register_lastname"
+                    android:padding="@dimen/textbox_padding"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#70FFFFFF"
+                    android:textSize="@dimen/edittext_font_size" />
+
+                <com.kopykitab.ereader.components.EditText
+                    android:id="@+id/register_lastname"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/textbox_height"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border"
+                    android:hint="Last Name"
+                    android:nextFocusDown="@+id/register_email"
+                    android:padding="@dimen/textbox_padding"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#70FFFFFF"
+                    android:textSize="@dimen/edittext_font_size" />
+            </LinearLayout>
+
+            <com.kopykitab.ereader.components.EditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="@string/login_email"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/register_password"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <com.kopykitab.ereader.components.PasswordEditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:nextFocusDown="@+id/register_mobile_number"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <com.kopykitab.ereader.components.EditText
+                android:id="@+id/register_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:hint="Mobile Number (Optional)"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/register_referral_code"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="Type of Customer"
+                    android:textColor="#70FFFFFF"
+                    android:textSize="@dimen/textview_font_size" />
+
+                <RadioGroup
+                    android:id="@+id/customer_type_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textbox_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.kopykitab.ereader.components.RadioButton
+                        android:id="@+id/customer_type_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Student"
+                        android:textColor="@drawable/radiobutton_text_selector"
+                        android:textSize="@dimen/textview_font_size" />
+
+                    <com.kopykitab.ereader.components.RadioButton
+                        android:id="@+id/customer_type_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Teacher"
+                        android:textColor="@drawable/radiobutton_text_selector"
+                        android:textSize="@dimen/textview_font_size" />
+
+                    <com.kopykitab.ereader.components.RadioButton
+                        android:id="@+id/customer_type_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Parent"
+                        android:textColor="@drawable/radiobutton_text_selector"
+                        android:textSize="@dimen/textview_font_size" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.kopykitab.ereader.components.EditText
+                android:id="@+id/register_referral_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:hint="Referral Code (Optional)"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="186dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_state"
+                android:onClick="OnRegisterAccountButtonClick"
+                android:text="Register Account"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_font_size"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/login_button_height_small"
+                android:layout_gravity="center"
+                android:background="@drawable/transparent_button_state"
+                android:onClick="OnAlreadyRegisteredButtonClick"
+                android:text="Already Registered? Login Here."
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textview_font_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

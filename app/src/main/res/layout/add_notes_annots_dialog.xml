@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/add_notes_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/day_mode_background_color">
+
+        <ImageButton
+            android:id="@+id/cancelNotesButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/transparent_button_state"
+            android:contentDescription="@string/back"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button_big" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/cancelNotesButton"
+            android:text="Notes"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/saveNotesButton"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/transparent_button_state"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/button_font_size"
+            custom:font_name="Roboto-Medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kopykitab.ereader.components.EditText
+            android:id="@+id/dialogEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/border"
+            android:gravity="top|left"
+            android:hint="Write your Notes..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="@dimen/textbox_padding"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/edittext_font_size" />
+    </RelativeLayout>
+
+</LinearLayout>

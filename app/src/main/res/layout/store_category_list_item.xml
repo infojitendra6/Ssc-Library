@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_category_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="1dp"
+    android:layout_marginTop="1dp"
+    android:background="@drawable/store_item_state"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:elevation="5dp">
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/store_subcategory_text_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/store_category_list_text_size"
+        custom:font_name="Roboto-Regular" />
+
+</RelativeLayout>

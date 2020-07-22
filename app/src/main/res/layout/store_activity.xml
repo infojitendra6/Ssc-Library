@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@color/action_bar_background"
+                android:elevation="4dp"
+                app:contentInsetEnd="@dimen/store_toolbar_margin"
+                app:contentInsetStart="@dimen/store_toolbar_margin"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_main_item_background"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/drawer_navigation_button"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:background="@drawable/store_item_state"
+                        android:clickable="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_menu" />
+
+                    <com.kopykitab.ereader.components.TextView
+                        android:id="@+id/search_widget_view"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="90"
+                        android:background="@drawable/store_item_state"
+                        android:gravity="center|left"
+                        android:paddingLeft="20dp"
+                        android:text="Search your product"
+                        android:textColor="#D4D4D4"
+                        android:textSize="@dimen/store_header_text_size"
+                        custom:font_name="Roboto-Medium" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <com.kopykitab.ereader.components.MaterialSearchView
+                android:id="@+id/search_view"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/store_content" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_menu_container"
+        android:layout_width="@dimen/left_menu_drawer_size"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/action_bar_background"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:src="@drawable/k_logo_small" />
+
+            <LinearLayout
+                android:id="@+id/menu_list_header_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/transparent_button_state"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/back_button" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/menu_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:divider="@color/white"
+            android:fadingEdge="none"
+            android:fitsSystemWindows="true"
+            android:groupIndicator="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

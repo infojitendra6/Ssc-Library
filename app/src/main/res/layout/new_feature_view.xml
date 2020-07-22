@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="100"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/permission_view_padding">
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/new_feature_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/action_bar_background"
+        android:textSize="@dimen/permission_title_text"
+        custom:font_name="Roboto-Bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#20000000" />
+
+    <ListView
+        android:id="@+id/new_feature_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.15"
+        android:divider="@color/white" />
+
+    <com.kopykitab.ereader.components.Button
+        android:id="@+id/new_feature_ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/permission_button_top_margin"
+        android:background="@drawable/permission_rounded_button"
+        android:padding="8dp"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/library_button_text_size" />
+</LinearLayout>

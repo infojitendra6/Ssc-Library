@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KITAB</string>
+
+    <string name="forgot_password_screen_name">KopyKitab.com &#187; Forgot Password</string>
+    <string name="register_screen_name">KopyKitab.com &#187; Register</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="search_books_hint">Title or Author</string>
+
+    <string name="my_library_label">My Library</string>
+    <string name="store_label">Store</string>
+
+    <string name="version">1.5 (git build)</string>
+    <string name="no_media_warning">Storage media not present</string>
+    <string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+    <string name="back">Go to the Main Page</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_backwards">Search backwards</string>
+    <string name="search_forwards">Search forwards</string>
+    <string name="search_document">Search document</string>
+    <string name="picker_title_App_Ver_Dir">%1$s %2$s: %3$s</string>
+    <string name="outline_title">Table of Contents</string>
+    <string name="enter_password">Enter password</string>
+    <string name="text_not_found">Text not found</string>
+    <string name="searching_">Searching&#8230;</string>
+    <string name="toggle_links">Highlight and enable links</string>
+    <string name="no_further_occurrences_found">No further occurrences found</string>
+    <string name="search">Search</string>
+    <string name="strike_out">Strike-out</string>
+    <string name="delete">Delete</string>
+    <string name="highlight">Highlight</string>
+    <string name="underline">Underline</string>
+    <string name="edit_annotations">Edit annotations</string>
+    <string name="more_annotations">More annotations</string>
+    <string name="ink">Ink</string>
+    <string name="print">Print</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="parent_directory">[Up one level]</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="entering_reflow_mode">Entering reflow mode</string>
+    <string name="leaving_reflow_mode">Leaving reflow mode</string>
+    <string name="print_failed">Print failed</string>
+    <string name="select_text">Select text</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="no_text_selected">No text selected</string>
+    <string name="draw_annotation">Draw annotation</string>
+    <string name="nothing_to_save">Nothing to save</string>
+    <string name="document_has_changes_save_them_">Document has changes. Save them?</string>
+    <string name="error_in_opening_document">Error in Opening Book. Dismiss and Click to Re-Download Book.</string>
+    <string name="cannot_open_document_Reason">Cannot open document: %1$s</string>
+    <string name="cannot_open_file_Path">Cannot open file: %1$s</string>
+    <string name="cannot_open_buffer">Cannot open buffer</string>
+    <string name="fill_out_text_field">Fill out text field</string>
+    <string name="okay">Okay</string>
+    <string name="choose_value">Choose value</string>
+    <string name="not_supported">Not supported</string>
+    <string name="copy_text_to_the_clipboard">Copy text to the clipboard</string>
+    <string name="more">More</string>
+    <string name="accept">Accept</string>
+    <string name="copy_text">copy text</string>
+    <string name="format_currently_not_supported">Format currently not supported</string>
+    <string name="toggle_reflow_mode">Toggle reflow mode</string>
+    <string name="search_keywords">Search Keywords&#8230;</string>
+
+    <string-array name="notification_tabs_items">
+        <item>Announcements</item>
+        <item>Offers</item>
+    </string-array>
+
+    <string-array name="notes_and_bookmarks_tabs_items">
+        <item>Notes</item>
+        <item>Bookmarks</item>
+    </string-array>
+
+    <!-- New Feature Text -->
+    <string-array name="new_feature_header_text_array">
+        <item>Create annotation</item>
+        <item>Select annotation type</item>
+        <item>View notes &amp; bookmark</item>
+        <item>Print option</item>
+    </string-array>
+    <string-array name="new_feature_text_array">
+        <item><![CDATA[<b><font color="#787878">Step 1 \u00A0</font></b>]]>Select pencil icon to highlight, underline, strikeout and notes important definition etc.</item>
+        <item><![CDATA[<b><font color="#787878">Step 2 \u00A0</font></b>]]>You can select between highlight, underline and strikeout</item>
+        <item><![CDATA[<b><font color="#787878">Step 3 \u00A0</font></b>]]>Browse through your annotation and print then to take a copy (OR) Click on the print icon</item>
+        <item><![CDATA[<b><font color="#787878">Step 4 \u00A0</font></b>]]>Select print and select the notes you want to print and click next</item>
+    </string-array>
+
+    <!-- Permission Text -->
+    <string-array name="permission_text_array">
+        <item><![CDATA[<b><font color="#FF8F00">Storage: </font></b>]]>To store your books and other educational content offline without internet connections (Mandatory)</item>
+        <item><![CDATA[<b><font color="#FF8F00">Phone: </font></b>]]>We need to identify your profile for security purpose (Mandatory)</item>
+        <item><![CDATA[<b><font color="#FF8F00">Contact: </font></b>]]>To prefill your email for easy one-click access (Optional)</item>
+        <item><![CDATA[<b><font color="#FF8F00">Location: </font></b>]]>To helps us recommended better content for your studies and exam preparations (Optional)</item>
+    </string-array>
+    <string name="permission_text">If you are unable to open JEE app</string>
+    <string name="permission_sub_text">Go to <![CDATA[<b><u><font color=\'#FF8F00\'>Settings > Permission</font></u></b>, and allow these permissions.]]></string>
+
+    <string name="notification_not_found">Nothing Yet !</string>
+
+    <!-- menu items -->
+    <string name="search_label">Search</string>
+    <string name="premium_label">Premium</string>
+    <string name="notification_label">Notifications</string>
+    <string name="recommendation_label">Recommended for you</string>
+    <string name="feedback_label">Feedback</string>
+    <string name="streams_label">Choose your Streams</string>
+
+    <string name="add_bookmark">Add Bookmark</string>
+    <string name="remove_bookmark">Remove Bookmark</string>
+    <string name="list_notes_and_bookmarks">List of Notes &amp; Bookmarks</string>
+
+    <string name="hint_prompt">Speak your product</string>
+    <string name="search_hint">Search your product</string>
+
+    <string name="facebook_app_id">1459678417649534</string>
+</resources>

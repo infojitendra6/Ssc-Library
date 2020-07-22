@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_navigation_widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bottom_navigation_widget_shadow"
+        android:elevation="2dp" />
+
+    <LinearLayout xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_navigation_widget_height"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/ebook_bottom_navigation_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/bottom_navigation_widget_button_state"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_ebook_disabled"
+            android:gravity="bottom|center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="E-books"
+            android:textAllCaps="false"
+            android:textColor="@color/bottom_navigation_widget_button_disable_color"
+            android:textSize="@dimen/bottom_navigation_widget_button_font_size"
+            custom:drawable_top_size_in_percent="@integer/bottom_navigation_widget_drawable_image_size" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/test_preparation_bottom_navigation_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/bottom_navigation_widget_button_state"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_test_preparation_disabled"
+            android:gravity="bottom|center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Test Preparation"
+            android:textAllCaps="false"
+            android:textColor="@color/bottom_navigation_widget_button_disable_color"
+            android:textSize="@dimen/bottom_navigation_widget_button_font_size"
+            custom:drawable_top_size_in_percent="@integer/bottom_navigation_widget_drawable_image_size" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/video_bottom_navigation_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/bottom_navigation_widget_button_state"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_video_disabled"
+            android:gravity="bottom|center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Video"
+            android:textAllCaps="false"
+            android:textColor="@color/bottom_navigation_widget_button_disable_color"
+            android:textSize="@dimen/bottom_navigation_widget_button_font_size"
+            custom:drawable_top_size_in_percent="@integer/bottom_navigation_widget_drawable_image_size" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/store_bottom_navigation_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/bottom_navigation_widget_button_state"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_store_disabled"
+            android:gravity="bottom|center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Store"
+            android:textAllCaps="false"
+            android:textColor="@color/bottom_navigation_widget_button_disable_color"
+            android:textSize="@dimen/bottom_navigation_widget_button_font_size"
+            custom:drawable_top_size_in_percent="@integer/bottom_navigation_widget_drawable_image_size" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/recommendation_bottom_navigation_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/bottom_navigation_widget_button_state"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ic_recommendation_disabled"
+            android:gravity="bottom|center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Recommendation"
+            android:textAllCaps="false"
+            android:textColor="@color/bottom_navigation_widget_button_disable_color"
+            android:textSize="@dimen/bottom_navigation_widget_button_font_size"
+            custom:drawable_top_size_in_percent="@integer/bottom_navigation_widget_drawable_image_size" />
+
+    </LinearLayout>
+</LinearLayout>

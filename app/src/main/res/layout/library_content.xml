@@ -1,0 +1,219 @@
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/library_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ProgressBar
+            android:id="@+id/library_progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-5dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:theme="@style/SearchLinearProgress"
+            android:visibility="gone" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.kopykitab.ereader.components.LibraryAutofitRecyclerView
+            android:id="@+id/libraryBookView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:columnWidth="120dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/search_find_more_books_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/library_find_more_book_top_margin"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/search_find_more_books_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/permission_rounded_button"
+                android:gravity="center"
+                android:onClick="OnSearchToStoreButtonClick"
+                android:padding="@dimen/library_find_more_books_padding"
+                android:text="Find More Books"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/library_button_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_results_no_books_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/no_result_found_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:text="No Results Found"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/no_result_found_sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="There are no items in your library that match the search Keyword"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                custom:font_name="Roboto-Light" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/search_in_store_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/library_ebook_not_found_padding"
+                android:background="@drawable/permission_rounded_button"
+                android:onClick="OnSearchToStoreButtonClick"
+                android:padding="8dp"
+                android:text="Search in Store"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/library_button_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/bottom_navigation_widget_height">
+
+        <ImageView
+            android:id="@+id/no_product_image_view"
+            android:layout_width="@dimen/library_ebook_not_found_icon_size"
+            android:layout_height="@dimen/library_ebook_not_found_icon_size" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/no_product_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/action_bar_background"
+            android:textSize="@dimen/library_button_text_size"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/no_product_sub_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:textColor="#50000000"
+            android:textSize="@dimen/library_button_text_size_small"
+            custom:font_name="Roboto-Light" />
+
+        <com.kopykitab.ereader.components.Button
+            android:id="@+id/no_product_button"
+            android:layout_width="@dimen/library_button_width"
+            android:layout_height="@dimen/library_button_height"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_button_state"
+            android:onClick="OnNoProductButtonClick"
+            android:textAllCaps="false"
+            android:textColor="@drawable/library_button_text_selector"
+            android:textSize="@dimen/library_button_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/bottom_navigation_widget_height">
+
+        <ImageView
+            android:layout_width="@dimen/library_ebook_not_found_icon_size"
+            android:layout_height="@dimen/library_ebook_not_found_icon_size"
+            android:src="@drawable/no_internet" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="You are not connected to the internet"
+            android:textColor="@color/action_bar_background"
+            android:textSize="@dimen/library_button_text_size"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Please check your Wi-Fi or mobile network connection and try again"
+            android:textColor="#50000000"
+            android:textSize="14sp"
+            custom:font_name="Roboto-Light" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="@dimen/store_button_width"
+                android:layout_height="@dimen/library_button_height"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button_state"
+                android:onClick="OnSettingsButtonClick"
+                android:text="Settings"
+                android:textAllCaps="false"
+                android:textColor="@drawable/library_button_text_selector"
+                android:textSize="@dimen/library_button_text_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="@dimen/store_button_width"
+                android:layout_height="@dimen/library_button_height"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button_state"
+                android:onClick="OnRefreshButtonClick"
+                android:text="Refresh"
+                android:textAllCaps="false"
+                android:textColor="@drawable/library_button_text_selector"
+                android:textSize="@dimen/library_button_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</ViewFlipper>

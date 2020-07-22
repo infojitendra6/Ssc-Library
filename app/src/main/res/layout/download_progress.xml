@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/download_book_image"
+            android:layout_width="250dp"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_cover" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/download_book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/download_bar"
+            android:layout_margin="8dp"
+            android:text="Book Name"
+            android:textColor="#4E4E4E"
+            android:textSize="11sp" />
+
+        <ProgressBar
+            android:id="@+id/download_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_alignBottom="@id/download_book_image"
+            android:layout_alignLeft="@id/download_book_image"
+            android:layout_alignRight="@id/download_book_image"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressDrawable="@drawable/download_progress" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/download_bar_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_alignBottom="@id/download_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="1dp"
+            android:gravity="center_horizontal"
+            android:text="0%"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+
+        <ImageButton
+            android:id="@+id/download_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/download_book_image"
+            android:layout_alignTop="@id/download_book_image"
+            android:background="@android:color/transparent"
+            android:src="@drawable/close_icon" />
+    </RelativeLayout>
+
+    <com.kopykitab.ereader.components.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@android:color/transparent"
+        android:text="Downloading..."
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+</LinearLayout>

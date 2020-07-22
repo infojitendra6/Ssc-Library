@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewAnimator
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/topBar0Main"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <TextView
+                android:id="@+id/docNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linkButton"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/back"
+                android:onClick="OnMainBackButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_big" />
+
+            <ImageButton
+                android:id="@+id/linkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/reflowButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/toggle_links"
+                android:src="@drawable/ic_link"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/reflowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/outlineButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/toggle_reflow_mode"
+                android:src="@drawable/ic_reflow"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/outlineButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/dayNightModeButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/outline_title"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_list" />
+
+            <ImageButton
+                android:id="@+id/dayNightModeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/editAnnotButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="Day/Night Mode"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_night_mode" />
+
+            <ImageButton
+                android:id="@+id/editAnnotButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/printAnnotations"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/edit_annotations"
+                android:onClick="OnEditAnnotButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_annotations" />
+
+            <ImageButton
+                android:id="@+id/printAnnotations"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="Print Annotations"
+                android:onClick="OnPrintAnnotationButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_print_small" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/moreAnnotButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/search_document"
+                android:onClick="OnSearchButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/search_icon" />
+
+            <ImageButton
+                android:id="@+id/moreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/more"
+                android:onClick="OnMoreButtonClick"
+                android:src="@drawable/ic_more"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/moreAnnotButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/more_annotations"
+                android:onClick="OnMoreAnnotButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/more_annotations" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar1Search"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <ImageButton
+                android:id="@+id/cancelSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelSearchButtonClick"
+                android:src="@drawable/ic_cancel" />
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchBack"
+                android:layout_toRightOf="@+id/cancelSearch"
+                android:background="@drawable/search"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/searchBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchForward"
+                android:background="@drawable/button"
+                android:contentDescription="@string/search_backwards"
+                android:src="@drawable/ic_arrow_left" />
+
+            <ImageButton
+                android:id="@+id/searchForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/search_forwards"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar2Annot"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <ImageButton
+                android:id="@+id/cancelAnnotButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelAnnotButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_big" />
+
+            <ImageButton
+                android:id="@+id/highlightButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/underlineButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/highlight"
+                android:onClick="OnHighlightButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_highlight" />
+
+            <ImageButton
+                android:id="@+id/underlineButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/strikeOutButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/underline"
+                android:onClick="OnUnderlineButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_underline" />
+
+            <ImageButton
+                android:id="@+id/strikeOutButton"
+                android:layout_width="38dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/strike_out"
+                android:onClick="OnStrikeOutButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_strike" />
+
+            <ImageButton
+                android:id="@+id/inkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/ink"
+                android:onClick="OnInkButtonClick"
+                android:src="@drawable/ic_brush"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar3Delete"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <ImageButton
+                android:id="@+id/cancelDeleteButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelDeleteButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_big" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/addNotesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/deleteButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="Add Notes"
+                android:drawableLeft="@drawable/ic_note"
+                android:drawablePadding="8dp"
+                android:onClick="OnAddNotesButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:text="Add Note"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_note_delete_button"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/delete"
+                android:drawableLeft="@drawable/ic_trash"
+                android:drawablePadding="5dp"
+                android:onClick="OnDeleteButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar4More"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <ImageButton
+                android:id="@+id/cancelMoreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelMoreButtonClick"
+                android:src="@drawable/ic_cancel" />
+
+            <ImageButton
+                android:id="@+id/printButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/copyTextButton"
+                android:background="@drawable/button"
+                android:contentDescription="@string/print"
+                android:onClick="OnPrintButtonClick"
+                android:src="@drawable/ic_print"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/copyTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/copy_text_to_the_clipboard"
+                android:onClick="OnCopyTextButtonClick"
+                android:src="@drawable/ic_clipboard" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar5Accept"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/day_mode_background_color">
+
+            <ImageButton
+                android:id="@+id/cancelAcceptButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelAcceptButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_big" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/annotType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/acceptButton"
+                android:layout_toRightOf="@+id/cancelAcceptButton"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                custom:font_name="Roboto-Medium" />
+
+            <ImageButton
+                android:id="@+id/saveAndAcceptButton"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_note_delete_button"
+                android:layout_toLeftOf="@+id/acceptButton"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/accept"
+                android:onClick="OnSaveAndAcceptButtonClick"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_note"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/acceptButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/accept"
+                android:onClick="OnAcceptButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_check" />
+        </RelativeLayout>
+    </ViewAnimator>
+
+    <RelativeLayout
+        android:id="@+id/topBarAnnotationButton"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/transparent_button_state">
+
+        <ImageButton
+            android:id="@+id/bookmarkPageButton"
+            android:layout_width="@dimen/bookmark_icon_size"
+            android:layout_height="@dimen/bookmark_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/transparent_button_state"
+            android:contentDescription="Page Bookmark"
+            android:scaleType="centerInside"
+            android:src="@drawable/bookmark_page" />
+    </RelativeLayout>
+
+    <!-- Use a RelativeLayout so that the app and the menu are layered on top of each other. -->
+
+    <RelativeLayout
+        android:id="@+id/notesBookmarksFlipperMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right">
+
+        <include
+            android:id="@+id/notesBookmarksMenu"
+            layout="@layout/notes_bookmarks_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lowerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/day_mode_background_color"
+        android:paddingTop="8dp">
+
+        <SeekBar
+            android:id="@+id/pageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:progressDrawable="@drawable/seek_progress"
+            android:thumb="@drawable/seek_thumb" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/pageNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pageSlider"
+            android:layout_centerHorizontal="true"
+            android:textColor="#4E4E4E"
+            android:textSize="11sp"
+            custom:font_name="Roboto-Light" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pageSlider"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/page_num"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Use a RelativeLayout so that the dimming the background color. -->
+
+    <RelativeLayout
+        android:id="@+id/bac_dim_notesBookmarksFlipperMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C0000000"
+        android:gravity="right"
+        android:visibility="gone" />
+
+</RelativeLayout>

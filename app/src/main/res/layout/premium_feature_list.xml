@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/premium_item_padding"
+    android:paddingRight="@dimen/premium_item_padding"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/premium_feature_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/premium_feature_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/premium_feature_margin_left"
+        android:layout_toRightOf="@id/premium_feature_image"
+        android:gravity="center_vertical"
+        android:textColor="#383838"
+        android:textSize="@dimen/premium_feature_text_size"
+        custom:font_name="Roboto-Bold" />
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/premium_feature_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/premium_feature_title"
+        android:layout_marginLeft="@dimen/premium_feature_margin_left"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/premium_feature_image"
+        android:textColor="#383838"
+        android:textSize="@dimen/button_font_size" />
+
+</RelativeLayout>

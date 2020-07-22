@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_button_state"
+            android:onClick="OnBackButtonClick"
+            android:padding="10dp"
+            android:src="@drawable/back_button" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="70"
+                    android:src="@drawable/k_logo" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15" />
+            </LinearLayout>
+
+            <com.kopykitab.ereader.components.EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/border"
+                android:hint="@string/login_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <com.kopykitab.ereader.components.PasswordEditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:background="@drawable/border"
+                android:hint="@string/login_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:padding="@dimen/textbox_padding"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/edittext_font_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/login_button"
+                android:layout_width="186dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_state"
+                android:enabled="true"
+                android:onClick="validateLogin"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_font_size"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/login_button_height_small"
+                android:layout_gravity="center"
+                android:background="@drawable/transparent_button_state"
+                android:onClick="OnForgotPasswordButtonClick"
+                android:text="Forgot Password?"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textview_font_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/login_button_height_small"
+                android:layout_gravity="center"
+                android:background="@drawable/transparent_button_state"
+                android:onClick="OnRegisterButtonClick"
+                android:text="New User? Register Here."
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textview_font_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

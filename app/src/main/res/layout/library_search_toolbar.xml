@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/library_search_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white"
+    android:elevation="4dp"
+    app:collapseIcon="@drawable/ic_action_navigation_arrow_back"
+    app:contentInsetStartWithNavigation="0dp"
+    app:layout_scrollFlags="scroll|enterAlways|snap"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:titleTextColor="@color/black">
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="36dp"
+        android:clickable="false"
+        android:src="@drawable/k_logo_small" />
+</android.support.v7.widget.Toolbar>
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ViewAnimator
+        android:id="@+id/outline_topbar_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#ADADAD"
+            android:paddingRight="8dp" >
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/back"
+                android:onClick="OnOutlineBackButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_big" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/docNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/backButton"
+                android:paddingLeft="8dp"
+                android:paddingRight="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                custom:font_name="Roboto-Medium" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/transparent_button_state"
+                android:contentDescription="@string/back"
+                android:onClick="OnOutlineSearchButtonClick"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/search_icon_2" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/search_popover_border"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/menu_list_item_state"
+                android:onClick="OnOutlineSearchViewBackButtonClick"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/back_button_black" />
+            </LinearLayout>
+
+            <com.kopykitab.ereader.components.ClearableEditText
+                android:id="@+id/outline_search_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:hint="Index Name"
+                android:imeOptions="flagNoExtractUi"
+                android:textColor="@android:color/black"
+                android:textColorHint="#DADADA"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+    </ViewAnimator>
+
+    <RelativeLayout
+        android:id="@+id/outline_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp" >
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:text="Index Name"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:text="Page"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            custom:font_name="Roboto-Medium" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/outline_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="#B6B6B6"
+        android:dividerHeight="0dp"
+        android:fadingEdgeLength="0dp"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never" />
+
+</LinearLayout>

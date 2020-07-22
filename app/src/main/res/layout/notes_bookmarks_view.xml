@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/notes_and_bookmarks_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/notes_and_bookmarks_results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:fadingEdgeLength="0dp"
+                android:overScrollMode="never"
+                android:paddingBottom="70dp"
+                android:paddingTop="20dp"
+                android:scrollbars="vertical" />
+
+            <com.kopykitab.ereader.components.CircularProgressView
+                android:id="@+id/notes_and_bookmarks_progress"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                custom:cpv_animAutostart="true"
+                custom:cpv_color="@color/action_bar_background"
+                custom:cpv_indeterminate="true"
+                custom:cpv_thickness="4dp" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/print_notes_bookmark_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/print_rounded_button"
+                android:drawableLeft="@drawable/ic_print_icon"
+                android:drawablePadding="12dp"
+                android:elevation="5dp"
+                android:gravity="left|center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:text="Print"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                android:visibility="gone"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/print_annotation_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/print_annotation_info_state"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/notes_bookmark_color"
+                android:visibility="gone" />
+
+            <include layout="@layout/premium_transparent_view" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/notes_bookmark_not_found_icon_size"
+                android:layout_height="@dimen/notes_bookmark_not_found_icon_size"
+                android:src="@drawable/notes_big" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="No Notes are created"
+                android:textColor="@color/action_bar_background"
+                android:textSize="@dimen/notes_bookmark_not_found_font_size"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:text="You can now take notes after Highlighting, underline &amp; Strikeout \nNew Feature: You can now print your notes."
+                android:textColor="#50000000"
+                android:textSize="@dimen/notes_bookmark_not_found_font_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/notes_bookmark_not_found_icon_size"
+                android:layout_height="@dimen/notes_bookmark_not_found_icon_size"
+                android:src="@drawable/bookmark_big" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="No Bookmarks are created"
+                android:textColor="@color/action_bar_background"
+                android:textSize="@dimen/notes_bookmark_not_found_font_size"
+                custom:font_name="Roboto-Medium" />
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Bookmark your important pages.\nClick Bookmark icon to Bookmark the page.\nNew Feature: You can now print your notes/bookmark"
+                android:textColor="#50000000"
+                android:textSize="@dimen/notes_bookmark_not_found_font_size_small" />
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>

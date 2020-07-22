@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/login_main_item_background"
+    android:orientation="vertical"
+    android:padding="8dp"
+    app:elevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:orientation="horizontal">
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/store_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/category_section_header_weight1"
+            android:background="@color/white"
+            android:paddingBottom="7dp"
+            android:paddingStart="15dp"
+            android:paddingTop="7dp"
+            android:textColor="#383838"
+            android:textSize="@dimen/store_header_text_size"
+            custom:font_name="Roboto-Medium" />
+
+        <ToggleButton
+            android:id="@+id/store_category_toggle_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/category_section_header_weight2"
+            android:background="@color/white"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/selector_section_toggle"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="#787878"
+            android:textOff="See All"
+            android:textOn="Hide All"
+            android:textSize="@dimen/store_right_header_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/store_sub_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="7dp"
+        android:paddingStart="15dp"
+        android:paddingTop="7dp"
+        android:textColor="#50000000"
+        android:textSize="@dimen/store_category_sub_header_text_size"
+        android:visibility="gone"
+        custom:font_name="Roboto-Regular" />
+
+</LinearLayout>

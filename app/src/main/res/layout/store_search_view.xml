@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#10000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/action_bar_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/store_search_layout_margin"
+                android:layout_marginRight="@dimen/store_search_layout_margin"
+                android:background="@drawable/login_main_item_background">
+
+                <RelativeLayout
+                    android:id="@+id/search_top_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <com.kopykitab.ereader.components.EditText
+                        android:id="@+id/searchTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="@null"
+                        android:hint="Kopykitab"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="@dimen/store_search_hint_text_padding"
+                        android:paddingRight="40dp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="#383838"
+                        android:textColorHint="#D4D4D4"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/store_header_text_size"
+                        custom:font_name="Roboto-Medium" />
+
+                    <ImageButton
+                        android:id="@+id/action_up_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/store_search_back_button_padding"
+                        android:paddingRight="@dimen/search_icon_padding"
+                        android:src="@drawable/ic_action_navigation_arrow_back" />
+
+                    <ImageButton
+                        android:id="@+id/action_voice_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/search_icon_padding"
+                        android:paddingRight="@dimen/search_icon_padding"
+                        android:src="@drawable/ic_action_voice_search" />
+
+                    <ImageButton
+                        android:id="@+id/action_empty_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/search_icon_padding"
+                        android:paddingRight="@dimen/search_icon_padding"
+                        android:src="@drawable/ic_action_navigation_close"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-7dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:theme="@style/SearchLinearProgress"
+            android:visibility="gone" />
+
+        <ViewFlipper
+            android:id="@+id/search_view_flip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/search_result_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/bottom_navigation_widget_height">
+
+                <ImageView
+                    android:layout_width="@dimen/library_ebook_not_found_icon_size"
+                    android:layout_height="@dimen/library_ebook_not_found_icon_size"
+                    android:src="@drawable/no_internet" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="You are not connected to the internet"
+                    android:textColor="@color/action_bar_background"
+                    android:textSize="@dimen/library_button_text_size"
+                    custom:font_name="Roboto-Medium" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Please try again later"
+                    android:textColor="#50000000"
+                    android:textSize="14sp"
+                    custom:font_name="Roboto-Light" />
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+</FrameLayout>

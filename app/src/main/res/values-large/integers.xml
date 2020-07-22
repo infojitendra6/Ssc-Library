@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="annotations_menu_width_size">70</integer>
+    <integer name="annotations_menu_width_hidden_size">30</integer>
+    <integer name="notes_bookmark_drawable_icon_size">50</integer>
+    <integer name="bottom_navigation_widget_drawable_image_size">50</integer>
+
+    <integer name="login_main_icon_layout_weight">32</integer>
+    <integer name="login_main_form_layout_weight">68</integer>
+
+    <integer name="category_section_header_weight1">85</integer>
+    <integer name="category_section_header_weight2">15</integer>
+    <integer name="minimum_cart_products">3</integer>
+</resources>

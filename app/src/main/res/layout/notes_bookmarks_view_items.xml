@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notes_bookmarks_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/annotation_list_item_state">
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/book_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        custom:font_name="Roboto-Medium" />
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_name"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/chapter_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:textColor="@color/notes_bookmark_color"
+            android:textSize="@dimen/notes_bookmark_font_size"
+            custom:font_name="Roboto-Medium" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/notes_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.27"
+            android:gravity="right"
+            android:textColor="#787878"
+            android:textSize="@dimen/notes_bookmark_small_font_size" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/bookmark_page_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="right"
+            android:textColor="@color/notes_bookmark_color"
+            android:textSize="@dimen/notes_bookmark_font_size"
+            custom:font_name="Roboto-Medium" />
+    </LinearLayout>
+
+    <com.kopykitab.ereader.components.TextView
+        android:id="@+id/annotation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_layout"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="#787878"
+        android:textSize="@dimen/notes_bookmark_font_size"
+        android:visibility="gone"
+        custom:font_name="Roboto-Regular" />
+
+    <LinearLayout
+        android:id="@+id/notes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/annotation_text"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <com.kopykitab.ereader.components.TextView
+            android:id="@+id/notes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#787878"
+            android:textSize="@dimen/notes_bookmark_font_size"
+            custom:font_name="Roboto-Regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notes_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notes_layout"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#15000000" />
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/buttons_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notes_divider">
+
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/note_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_state_2"
+                android:drawableLeft="@drawable/annots_edit"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="8dp"
+                android:text="Notes"
+                android:textAllCaps="false"
+                android:textColor="@color/notes_bookmark_color"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/share_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_state_2"
+                android:drawableLeft="@drawable/annots_share"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="8dp"
+                android:text="Share"
+                android:textAllCaps="false"
+                android:textColor="@color/notes_bookmark_color"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+
+            <com.kopykitab.ereader.components.Button
+                android:id="@+id/delete_notes_bookmark_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/list_item_state_2"
+                android:drawableLeft="@drawable/annots_delete"
+                android:drawablePadding="4dp"
+                android:gravity="left|center"
+                android:padding="8dp"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/notes_bookmark_color"
+                android:textSize="@dimen/notes_bookmark_font_size"
+                custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_print_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/add_print_button_state"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="8dp">
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/add_print_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:text="Add this page to print"
+                android:textColor="@color/notes_bookmark_color"
+                android:textSize="@dimen/add_print_text" />
+
+            <com.kopykitab.ereader.components.Button xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/add_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/add_print_rounded_button"
+                android:clickable="false"
+                android:elevation="3dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,UnusedAttribute" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/remove_print_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/add_print_button_state"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="8dp">
+
+            <com.kopykitab.ereader.components.TextView
+                android:id="@+id/remove_print_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:text="Remove this page from print"
+                android:textColor="@color/notes_bookmark_color"
+                android:textSize="@dimen/add_print_text" />
+
+            <com.kopykitab.ereader.components.Button xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/remove_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/add_print_rounded_button"
+                android:clickable="false"
+                android:elevation="3dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,UnusedAttribute" />
+        </LinearLayout>
+    </ViewFlipper>
+
+</RelativeLayout>

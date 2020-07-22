@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@integer/login_main_icon_layout_weight"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_main_top_icon_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/k_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@integer/login_main_form_layout_weight"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="@dimen/login_main_form_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_main_shadow"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_main_item_height"
+                    android:layout_marginBottom="@dimen/login_main_item_inner_margin"
+                    android:layout_marginLeft="@dimen/login_main_item_margin"
+                    android:layout_marginRight="@dimen/login_main_item_margin"
+                    android:layout_marginTop="@dimen/login_main_item_margin"
+                    android:background="@drawable/login_main_item_background"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:onClick="OnFacebookButtonClick"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_facebook" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/login_main_form_button_margin"
+                        android:orientation="vertical">
+
+                        <com.kopykitab.ereader.components.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Continue with Facebook  "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/login_main_item_font_size"
+                            custom:font_name="Roboto-Medium" />
+
+                        <com.kopykitab.ereader.components.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="We won't post without asking"
+                            android:textColor="#90000000"
+                            android:textSize="@dimen/login_main_item_font_size_small" />
+                    </LinearLayout>
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_with_fb_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_main_item_height"
+                    android:layout_marginBottom="@dimen/login_main_item_inner_margin"
+                    android:layout_marginLeft="@dimen/login_main_item_margin"
+                    android:layout_marginRight="@dimen/login_main_item_margin"
+                    android:layout_marginTop="@dimen/login_main_item_inner_margin"
+                    android:background="@drawable/login_main_item_background"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:onClick="OnGoogleButtonClick"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_google" />
+
+                    <com.kopykitab.ereader.components.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/login_main_form_button_margin"
+                        android:gravity="center"
+                        android:text="Continue with Google     "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/login_main_item_font_size"
+                        custom:font_name="Roboto-Medium" />
+
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@+id/google_btn_sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_main_item_height"
+                    android:layout_marginLeft="@dimen/login_main_item_margin"
+                    android:layout_marginRight="@dimen/login_main_item_margin"
+                    android:layout_marginTop="@dimen/login_main_item_inner_margin"
+                    android:background="@drawable/login_main_item_background"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:onClick="OnEmailLoginButtonClick"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_email" />
+
+                    <com.kopykitab.ereader.components.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/login_main_form_button_margin"
+                        android:gravity="center"
+                        android:text="Already have an Account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/login_main_item_font_size"
+                        custom:font_name="Roboto-Medium" />
+                </LinearLayout>
+
+                <com.kopykitab.ereader.components.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_main_item_height"
+                    android:layout_marginBottom="@dimen/login_main_item_inner_margin"
+                    android:layout_marginLeft="@dimen/login_main_item_margin"
+                    android:layout_marginRight="@dimen/login_main_item_margin"
+                    android:background="@drawable/transparent_button_state"
+                    android:onClick="OnEmailSigninButtonClick"
+                    android:text="New User? Register Here"
+                    android:textAllCaps="false"
+                    android:textColor="#9A4201"
+                    android:textSize="@dimen/login_main_item_font_size"
+                    custom:font_name="Roboto-Medium" />
+            </LinearLayout>
+
+            <com.kopykitab.ereader.components.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Many Students using MYBOOK"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_main_item_font_size_small" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

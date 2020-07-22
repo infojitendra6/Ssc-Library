@@ -1,0 +1,121 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+
+    <!-- Application theme. -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+        <item name="android:actionButtonStyle">@style/AppTheme.ActionButtonStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/AppTheme.ActionButtonStyle.Overflow
+        </item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:actionMenuTextAppearance">
+            @style/AppTheme.ActionBarStyle.TitleTextStyle
+        </item>
+    </style>
+
+    <style name="PdfViewTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimary">@color/action_bar_background</item>
+        <item name="colorPrimaryDark">@color/action_bar_background_dark</item>
+        <item name="colorAccent">#F7DA64</item>
+        <item name="colorControlHighlight">@color/action_bar_background</item>
+        <item name="android:height">30dp</item>
+    </style>
+
+    <style name="AppTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/action_bar_background</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBarStyle.TitleTextStyle</item>
+    </style>
+
+    <style name="AppTheme.ActionButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton">
+        <item name="android:minWidth">32dip</item>
+        <item name="android:padding">6dip</item>
+    </style>
+
+    <style name="AppTheme.ActionBarStyle.TitleTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.ActionButtonStyle.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/overflow_icon</item>
+        <item name="android:minWidth">32dip</item>
+        <item name="android:padding">6dip</item>
+    </style>
+
+    <style name="DashboardTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/action_bar_background</item>
+        <item name="colorPrimaryDark">@color/action_bar_background_dark</item>
+        <item name="colorAccent">@color/action_bar_background</item>
+        <item name="colorControlHighlight">@color/action_bar_background</item>
+        <item name="drawerArrowStyle">@style/DashboardDrawerArrowStyle</item>
+    </style>
+
+    <style name="DashboardDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="NotificationsTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/action_bar_background</item>
+        <item name="colorPrimaryDark">@color/action_bar_background_dark</item>
+        <item name="colorAccent">@color/action_bar_background</item>
+        <item name="colorControlHighlight">@color/action_bar_background</item>
+        <item name="drawerArrowStyle">@style/DashboardDrawerArrowStyle</item>
+        <item name="actionBarStyle">@style/NotificationsTheme.ActionBarStyle</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="NotificationsTheme.ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="titleTextStyle">@style/NotificationsTheme.ActionBarStyle.TitleBarTextColor
+        </item>
+    </style>
+
+    <style name="NotificationsTheme.ActionBarStyle.TitleBarTextColor" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="VideoViewTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/action_bar_background</item>
+        <item name="colorPrimaryDark">@color/action_bar_background_dark</item>
+        <item name="colorAccent">@color/action_bar_background</item>
+    </style>
+
+    <style name="StoreTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <item name="searchBackground">@android:color/white</item>
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search</item>
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close</item>
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back</item>
+        <!--<item name="searchSuggestionBackground">...</item>-->
+        <item name="android:textColor">#383838</item>
+        <item name="android:textColorHint">#D4D4D4</item>
+        <item name="android:hint">@string/search_hint</item>
+    </style>
+
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    
+    <attr name="font_name" format="string" />
+    <declare-styleable name="TextView">
+        <attr name="font_name" />
+    </declare-styleable>
+    
+    <declare-styleable name="EditText">
+        <attr name="font_name" />
+    </declare-styleable>
+    
+    <declare-styleable name="Button">
+        <attr name="font_name" />
+        <attr name="drawable_left_size_in_percent" format="integer" />
+        <attr name="drawable_top_size_in_percent" format="integer" />
+        <attr name="drawable_right_size_in_percent" format="integer" />
+        <attr name="drawable_bottom_size_in_percent" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="ScrimInsetsView">
+    	<attr name="insetForeground" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="CircularProgressView">
+        <attr name="cpv_progress" format="float" />
+        <attr name="cpv_maxProgress" format="float" />
+        <attr name="cpv_animDuration" format="integer" />
+        <attr name="cpv_animSwoopDuration" format="integer" />
+        <attr name="cpv_animSyncDuration" format="integer" />
+        <attr name="cpv_color" format="color"/>
+        <attr name="cpv_thickness" format="dimension"/>
+        <attr name="cpv_indeterminate" format="boolean" />
+        <attr name="cpv_animAutostart" format="boolean" />
+        <attr name="cpv_animSteps" format="integer" />
+        <attr name="cpv_startAngle" format="float" />
+    </declare-styleable>
+    
+    <declare-styleable name="CircularImageView">
+        <attr name="border" format="boolean"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="shadow" format="boolean"/>
+        <attr name="shadow_color" format="color"/>
+        <attr name="shadow_radius" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="Theme">
+        <attr name="circularImageViewStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+</resources>

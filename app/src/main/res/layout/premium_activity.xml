@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp">
+
+    <com.kopykitab.ereader.components.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="171dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gopremimum_icon" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="How will this benefit you?"
+                    android:textColor="#383838"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="Print your notes/Highlights and carry it like a booklet \n Premium ebook packs worth INR 700+"
+                    android:textColor="#383838"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.kopykitab.ereader.components.Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/transparent_button_state"
+                    android:drawableLeft="@drawable/ic_back_icon"
+                    android:drawablePadding="2dp"
+                    android:gravity="left|center"
+                    android:onClick="OnBackButtonClick"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/notes_bookmark_font_size"
+                    custom:drawable_left_size_in_percent="@integer/notes_bookmark_drawable_icon_size" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12.3dp"
+                android:layout_marginTop="20.7dp"
+                android:orientation="horizontal">
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Premium features"
+                    android:textColor="#373737"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/top_banner_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="188.3dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="34.3dp"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/bottom_banner_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="188.3dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="14.3dp"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="22.3dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12.3dp"
+                android:orientation="horizontal">
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="Premium ebooks"
+                    android:textColor="#373737"
+                    android:textSize="14sp" />
+
+                <com.kopykitab.ereader.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Select Category"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/premium_category_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#a5a5a5" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/premium_book_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:clipToPadding="false"
+                android:divider="#fff"
+                android:dividerHeight="0dp"
+                android:paddingLeft="24.3dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </com.kopykitab.ereader.components.StickyScrollView>
+
+    <LinearLayout
+        android:id="@+id/premium_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.kopykitab.ereader.components.CircularProgressView
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            custom:cpv_animAutostart="true"
+            custom:cpv_color="#ff8b00"
+            custom:cpv_indeterminate="true"
+            custom:cpv_thickness="4dp" />
+
+        <com.kopykitab.ereader.components.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Please wait...."
+            android:textColor="#ff8b00"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.kopykitab.ereader.components.Button
+        android:id="@+id/btnGoPremium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/premium_button_gradient"
+        android:elevation="2dp"
+        android:onClick="OnGoPremiumButtonClicked"
+        android:text="gopremium"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,MissingPrefix,SpUsage" />
+
+</RelativeLayout>
